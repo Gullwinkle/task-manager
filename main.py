@@ -34,12 +34,12 @@ def finish_task():
 
 root = tk.Tk()
 root.title('Task list')
-root.configure(background='HotPink')
+root.configure(background='antiquewhite3')
 
-text1 = tk.Label(root, text='Введите вашу задачу:', bg='HotPink')
+text1 = tk.Label(root, text='Введите вашу задачу:', bg='antiquewhite3')
 text1.grid(column=0, row=0, pady=5)
 
-task_entry = tk.Entry(root, width=30, bg='DeepPink1')
+task_entry = tk.Entry(root, width=30, bg='antiquewhite4')
 task_entry.grid(column=0, row=1, pady=10)
 
 add_task_button = tk.Button(root, text='Добавить задачу', command=add_task, width=40)
@@ -54,31 +54,31 @@ start_task_button.grid(column=1, row=2, pady=5)
 finish_task_button = tk.Button(root, text='Завершить задачу', command=finish_task, width=40)
 finish_task_button.grid(column=2, row=2, pady=5)
 
-text2 = tk.Label(root, text='Список задач:', bg='HotPink')
+text2 = tk.Label(root, text='Список задач:', bg='antiquewhite3')
 text2.grid(column=0, row=3, pady=5)
 
 task_listbox = tk.Listbox(root, height=10, width=50, bg='LightPink1')
 task_listbox.grid(column=0, row=4, pady=10)
 
-text3 = tk.Label(root, text='Начатые задачи:', bg='HotPink')
+text3 = tk.Label(root, text='Начатые задачи:', bg='antiquewhite3')
 text3.grid(column=1, row=3, pady=5)
 
-started_listbox = tk.Listbox(root, height=10, width=50, bg='LightPink1')
+started_listbox = tk.Listbox(root, height=10, width=50, bg='moccasin')
 started_listbox.grid(column=1, row=4, pady=10)
 
-text4 = tk.Label(root, text='Выполненные задачи:', bg='HotPink')
+text4 = tk.Label(root, text='Выполненные задачи:', bg='antiquewhite3')
 text4.grid(column=2, row=3, pady=5)
 
-finished_listbox = tk.Listbox(root, height=10, width=50, bg='LightPink1')
+finished_listbox = tk.Listbox(root, height=10, width=50, bg='aquamarine2')
 finished_listbox.grid(column=2, row=4, pady=10)
 
-text5 = tk.Label(root, text='Выберите задачу в списке зачач и\n нажмите на кнопку ниже, чтобы начать её.', bg='HotPink')
+text5 = tk.Label(root, text='Выберите задачу в списке зачач и\n нажмите на кнопку ниже, чтобы начать её.', bg='antiquewhite3')
 text5.grid(column=1, row=1)
 
-text6 = tk.Label(root, text='Выберите задачу в списке начатых зачач и\n нажмите на кнопку ниже, чтобы завершить её.', bg='HotPink')
+text6 = tk.Label(root, text='Выберите задачу в списке начатых зачач и\n нажмите на кнопку ниже, чтобы завершить её.', bg='antiquewhite3')
 text6.grid(column=2, row=1)
 
-text7 = tk.Label(root, text='- Удаляет выбранную задачу из любого списка.', bg='HotPink')
+text7 = tk.Label(root, text='- Удаляет выбранную задачу из любого списка.', bg='antiquewhite3')
 text7.grid(column=2, row=0)
 
 root.mainloop()
