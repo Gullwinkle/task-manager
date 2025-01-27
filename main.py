@@ -39,11 +39,11 @@ def save_tasks():
         started_list = started_listbox.get(0, tk.END)
         finished_list = finished_listbox.get(0, tk.END)
         with open(file_name, 'w', encoding='utf-8') as file:
-            file.write(','.join(task_list))
+            file.write(':!:'.join(task_list))
             file.write('\n')
-            file.write(','.join(started_list))
+            file.write(':!:'.join(started_list))
             file.write('\n')
-            file.write(','.join(finished_list))
+            file.write(':!:'.join(finished_list))
     else:
         save_tasks_as()
 def save_tasks_as():
@@ -60,18 +60,18 @@ def load_tasks():
     started_listbox.delete(0, tk.END)
     finished_listbox.delete(0, tk.END)
     try:
-        with open(file_name, 'r') as file:
+        with open(file_name, 'r', encoding='utf-8') as file:
             tasks = file.read().split('\n')
             i_task = 0
             i_started = 0
             i_finished = 0
-            for task in tasks[0].split(','):
+            for task in tasks[0].split(':!:'):
                 task_listbox.insert(i_task, task)
                 i_task += 1
-            for task in tasks[1].split(','):
+            for task in tasks[1].split(':!:'):
                 started_listbox.insert(i_started, task)
                 i_started += 1
-            for task in tasks[2].split(','):
+            for task in tasks[2].split(':!:'):
                 finished_listbox.insert(i_finished, task)
                 i_finished += 1
     except FileNotFoundError:
